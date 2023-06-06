@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('v1/auth')->group(function () {
+        // Matches The "/api/v1/auth" URL
+        Route::get('login',[\App\Http\Controllers\Auth\AuthController::class, 'showloginForm'])->name('auth.showloginform');
+        Route::post('login',[\App\Http\Controllers\Auth\AuthController::class, 'postLogin'])->name('auth.login');
+
+});
+
+
+
+
+
