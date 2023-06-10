@@ -1,0 +1,25 @@
+body {
+    font-family: poppins;
+    background: #7E1880 !important;
+    font-weight: 100;
+    color: white;
+}
+
+.card-header{
+    background: #d3d3d4 !important;
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.card{
+    background: black;
+    width: 100%;
+}
+.table-condensed{
+    font-size: 12px;
+}
+.pagination{
+position: relative !important;
+margin: auto !important;
+}
+
