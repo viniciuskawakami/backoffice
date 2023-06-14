@@ -13,9 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gender__identities', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('gender_identities', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
+            $table->comment('Most common gender identities Table');
+            $table->bigIncrements('id');
+            $table->string('acronym')->nullable(true);
+            $table->string('name')->nullable(false);
+            $table->string('slug')->nullable(true);
+            $table->text('description')->nullable(false);
+            $table->boolean('isActive')->default(false);
+            $table->dateTime('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrentOnUpdate();
+            $table->softDeletes('deleted_at')->nullable(true)->default((\DB::raw('NULL')));
         });
     }
 

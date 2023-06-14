@@ -21,12 +21,11 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('acronym')->nullable(true);
             $table->string('name')->nullable(false);
-            $table->string('slug')->nullable(true);
             $table->text('description')->nullable(false);
+            $table->string('slug')->nullable(true);
             $table->boolean('isActive')->default(false);
             $table->dateTime('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrentOnUpdate();
-            $table->boolean('isDeleted')->default(false);
             $table->softDeletes('deleted_at')->nullable(true)->default((\DB::raw('NULL')));
         });
     }

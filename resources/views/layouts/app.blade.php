@@ -18,16 +18,16 @@
 
     <!-- Styles -->
 
-    <link href="{{url(mix('cwt/assets/css/0.0.1/cwt.css'))}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{url(mix('cwt/assets/css/font-awesome/4.7.0/font-awesome.min.css'))}}">
-    <link href="{{url(mix('cwt/assets/css/intl-tel-input/18.1.3/intTelInput.css'))}}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{url(mix('/cwt/assets/css/bootstrap/5.2.3/bootstrap.css'))}}">
-    <link rel="stylesheet" href="{{url(mix('/cwt/assets/css/boxicons/2.1.4/boxicons.css'))}}">
-    <link rel="stylesheet" href="{{url(mix('cwt/assets/css/dataTables/1.13.4/jquerydataTables.min.css'))}}">
+    <link href="{{url('cwt/assets/css/0.0.1/cwt.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url('cwt/assets/css/font-awesome/4.7.0/font-awesome.min.css')}}">
+    <link href="{{url('cwt\assets\css\intl-tel-input\18.0.0\intTelInput.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{url('/cwt/assets/css/bootstrap/5.2.3/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url('/cwt/assets/css/boxicons/2.1.4/boxicons.css')}}">
+    <link rel="stylesheet" href="{{url('cwt/assets/css/dataTables/1.13.4/jquerydataTables.min.css')}}">
 
-    <script src="{{url(mix('/cwt/assets/js/intl-tel-input/18.1.3/utils.js'))}}"></script>
-    <script src="{{url(mix('/cwt/assets/js/jquery/3.6.4/jquery.js'))}}'"></script>
-    <script src="{{url(mix('/cwt/assets/js/intl-tel-input/18.1.3/intTelInput.js'))}}"></script>
+    <script src="{{url('/cwt/assets/js/intl-tel-input/18.0.0/utils.js')}}"></script>
+    <script src="{{url('/cwt/assets/js/jquery/3.6.4/jquery.js')}}"></script>
+    <script src="{{url('/cwt/assets/js/intl-tel-input/18.0.0/intTelInput.js')}}"></script>
 
 
 </head>
@@ -72,13 +72,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout.custom') }}"
+                                    <a class="dropdown-item" href="{{ route('auth.logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout.custom') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('auth.logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
@@ -94,13 +94,13 @@
         </main>
     </div>
 
-    url<script src="{{url(mix('cwt/assets/js/cwt/0.0.1/cwt.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/jquery/3.6.4/jquery.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/jquey-mask-plugin/1.14.16/jquery-mask.min.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/dataTables/1.13.4/jquery.dataTables.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/boxicons/2.1.4/boxicons.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/axios/0.21.4/axios.js'))}}"></script>
-    <script src="{{url(mix('cwt/assets/js/bootstrap/5.2.3/bootstrap.bundle.js'))}}"></script>
+    url<script src="{{url('cwt/assets/js/cwt/0.0.1/cwt.js')}}"></script>
+    <script src="{{url('cwt/assets/js/jquery/3.6.4/jquery.js')}}"></script>
+    <script src="{{url('cwt/assets/js/jquey-mask-plugin/1.14.16/jquery-mask.min.js')}}"></script>
+    <script src="{{url('cwt/assets/js/dataTables/1.13.4/jquery.dataTables.js')}}"></script>
+    <script src="{{url('cwt/assets/js/boxicons/2.1.4/boxicons.js')}}"></script>
+    <script src="{{url('cwt/assets/js/axios/0.21.4/axios.js')}}"></script>
+    <script src="{{url('cwt/assets/js/bootstrap/5.2.3/bootstrap.bundle.js')}}"></script>
 
 
 

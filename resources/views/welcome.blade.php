@@ -29,6 +29,8 @@
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
+                        <a href="{{ route('log-viewer.index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log-Viewer</a>
+
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
                         @endif

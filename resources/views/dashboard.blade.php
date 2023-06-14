@@ -6,7 +6,12 @@
 </head>
 <body>
     <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
-        <div class="container">
+        <div class="container">><br><br></div
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>><br><br>
+        @endif
             <a class="navbar-brand mr-auto" href="#">ClickWebTech</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,13 +19,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    @guest
+                    @auth
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('auth.showLoginForm') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('auth.showRegisterForm') }}">Register</a>
                     </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('auth.logout') }}">Logout</a>
+                        </li>
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('auth.logout') }}">Logout</a>
@@ -28,7 +36,7 @@
                     @endguest
                 </ul>
             </div>
-        </div>
+        </div><br><br>
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
